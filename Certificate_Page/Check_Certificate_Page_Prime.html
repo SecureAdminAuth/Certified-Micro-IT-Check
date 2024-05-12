@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check Certificate Page</title>
+    <style>
+      /* Styles for logout button */
+      .logout-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 10px;
+        background-color: #0067b8;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      /* Styles for centering image */
+      .center-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      /* Responsive image */
+      .responsive-image {
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+        width: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Logout button -->
+    <button class="logout-button" onclick="logout()">Logout</button>
+
+    <!-- Centered image -->
+    <div class="center-image">
+      <img
+        src="./user1@micro.com.jpeg"
+        alt="Certificate Image"
+        class="responsive-image"
+      />
+    </div>
+
+    <script>
+      // Function to handle logout
+      function logout() {
+        // Clear user session
+        sessionStorage.removeItem("userLoggedIn");
+        // Redirect to thank_you.html page
+        window.location.href = "../Signout_Success/Thank_You.html";
+      }
+
+      // Function to check if user is logged in
+      function checkUserLoggedIn() {
+        return sessionStorage.getItem("userLoggedIn") === "true";
+      }
+
+      // Check if user is logged in, if not, redirect to Google
+      if (!checkUserLoggedIn()) {
+        window.location.href = "../index.html";
+      }
+    </script>
+  </body>
+</html>
