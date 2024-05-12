@@ -1,0 +1,14 @@
+.slideshowOverflow { padding: 0px 5px; }
+@media (max-width: 1024px) {
+  .carousel .sr-only-focusable:focus, .carousel .sr-only-focusable:active { position: relative !important; }
+}
+.alert-slideshow-nopadding { padding: 0px; }
+.alert-slideshow-nopadding .carousel-highlight-backplate .carousel-indicators { display: none; }
+.alert-slideshow-nopadding .carousel-highlight-backplate .carousel-inner .carousel-item { height: auto !important; }
+.alert-slideshow-nopadding .carousel-highlight-backplate { padding-bottom: 0rem; }
+@media screen and (max-width: 1083px) {
+  .alert-slideshow-nopadding .carousel-highlight-backplate .carousel-controls { display: contents; }
+  .alert-slideshow-nopadding .carousel-highlight-backplate .carousel-control-next, .alert-slideshow-nopadding .carousel-highlight-backplate .carousel-control-prev { background: rgba(255, 255, 255, 0.8); box-shadow: rgba(0, 0, 0, 0.13) 0px 0.1875rem 0.4375rem 0px, rgba(0, 0, 0, 0.11) 0px 0.0625rem 0.125rem 0px; height: 30px; width: 30px; top: 10%; border-radius: 50%; margin: 0px 0.25rem; position: absolute; }
+  .alert-slideshow-nopadding .carousel-highlight-backplate .carousel-inner .carousel-item .alert-component .alertThemer .alert.announcement-bar-theme .alert-content p { padding-left: 10%; padding-right: 5%; }
+  html[dir="rtl"] .alert-slideshow-nopadding .carousel-highlight-backplate .carousel-inner .carousel-item .alert-component .alertThemer .alert.announcement-bar-theme .alert-content p { padding-left: 5%; padding-right: 10%; }
+}
